@@ -11,7 +11,7 @@ const pool = new Pool({
 
 app.get("/", async (req, res) => {
   try {
-    const result = await pool.query("SELECT name FROM testing LIMIT 1");
+    const result = await pool.query("SELECT name FROM Testing LIMIT 1");
 
     if (result.rows.length === 0) {
       return res.send("레코드가 없습니다.");
